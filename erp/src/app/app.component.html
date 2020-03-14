@@ -1,0 +1,50 @@
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-center">
+
+        <div class="uk-navbar-center-left">
+          <div>
+            <ul class="uk-navbar-nav">
+                <li class="uk-animation-toggle uk-active"> <a class="uk-animation-scale-down" [routerLink]="['/about-us']"> ¿Quiénes somos? </a> </li>
+                <li class="uk-animation-toggle"><a class="uk-animation-scale-down" [routerLink]="['/store']"> Exhibición de remates </a></li>
+            </ul>
+          </div>
+        </div>
+        <a class="uk-navbar-item uk-logo" [routerLink]="['/home']"> Préstamos x garantía </a>
+        <div class="uk-navbar-center-right">
+            <div>
+              <ul class="uk-navbar-nav">
+                <li class="uk-animation-toggle"><a class="uk-animation-scale-down" [routerLink]="['/contact-us']"> Contáctanos </a></li>
+                <li class="uk-animation-toggle"> <a> <button class="uk-button uk-button-default" [routerLink]="['/sign-in']"> <span uk-icon="icon: sign-in"></span> Iniciar Sesión </button> </a> </li>
+                <li class="uk-animation-toggle"> <a> <button class="uk-button uk-button-default" [routerLink]="['/user-registration']"> Registrarse </button> </a> </li>
+                <li [hidden]="true">
+                    <a href="#">
+                      <span class="uk-border-circle uk-padding-small uk-tile-default uk-text-primary" uk-icon="icon: user"></span> 
+                      &nbsp; Usuario
+                    </a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a [routerLink]="['/my-profile']"> Mi perfil </a></li>
+                            <li><a [routerLink]="['/my-loans']"> Mis préstamos </a></li>
+                            <li><a [routerLink]="['/my-purchases']"> Mis compras </a></li>
+                            <li><a [routerLink]="['/my-account-state']"> Mi estado de cuenta </a></li>
+                            <li><a [routerLink]="['/valuation-online']"> Avalúo en linea </a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a [routerLink]="['/sign-out']"> <span uk-icon="icon: sign-out"></span> Cerrar sesión </a></li>
+                        </ul>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="uk-container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="uk-tile-muted uk-padding">
+  <p class="uk-text-center">
+    Prestamos x garantía | Correo electrónico: <a href="mailto:ejemplo@dominio.com"> ejemplo@dominio.com </a>
+  </p>
+</footer>
