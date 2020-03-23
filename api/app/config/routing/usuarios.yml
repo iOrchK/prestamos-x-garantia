@@ -1,0 +1,24 @@
+usuarios_todos:
+  path: /
+  defaults: { _controller: "AppBundle:Usuarios:todos"}
+  methods: GET
+
+usuarios_crear:
+  path: /
+  defaults: { _controller: "AppBundle:Usuarios:crear"}
+  methods: POST
+
+usuarios_detalle:
+  path: /{id}
+  defaults: { _controller: "AppBundle:Usuarios:detalle"}
+  methods: GET
+
+usuarios_actualizar:
+  path: /actualizar/{id}
+  defaults: { _controller: "AppBundle:Usuarios:actualizar"}
+  methods: POST
+
+usuarios_eliminar:
+  path: /eliminar/{id}
+  defaults: { _controller: "AppBundle:Usuarios:eliminar"}
+  methods: GET

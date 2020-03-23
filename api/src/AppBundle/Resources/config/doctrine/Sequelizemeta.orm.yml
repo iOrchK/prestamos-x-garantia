@@ -1,0 +1,18 @@
+AppBundle\Entity\Sequelizemeta:
+    type: entity
+    table: sequelizemeta
+    uniqueConstraints:
+        name:
+            columns:
+                - name
+    id:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    lifecycleCallbacks: {  }

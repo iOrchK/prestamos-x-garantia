@@ -1,0 +1,11 @@
+# app:
+#     resource: '@AppBundle/Controller/'
+#     type: annotation
+
+# default:
+#   resource: "./routing/default.yml"
+#   prefix: /default
+
+usuarios:
+  resource: "./routing/usuarios.yml"
+  prefix: /usuarios

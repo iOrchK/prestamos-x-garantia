@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1> Usuarios / Detalle </h1>
+                </div>
+                <div class="col-md-12">
+                    <p> ID: {{ usuario.id }} </p>
+                    <p> Nombre: {{ usuario.nombre }} </p>
+                    <p> Usuario: {{ usuario.usuario }} </p>
+                    <p> Clave: {{ usuario.claveacceso }} </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

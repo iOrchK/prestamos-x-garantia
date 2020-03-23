@@ -1,0 +1,120 @@
+AppBundle\Entity\Clientes:
+    type: entity
+    table: clientes
+    indexes:
+        idclasificacion:
+            columns:
+                - idclasificacion
+        idcreadopor:
+            columns:
+                - idcreadopor
+        ididentificacion:
+            columns:
+                - ididentificacion
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        activo:
+            type: boolean
+            nullable: true
+        claveidentificacion:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        correo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        cotitular:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        createdat:
+            type: datetime
+            nullable: false
+            column: createdAt
+        domicilio:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        eliminado:
+            type: boolean
+            nullable: true
+        fechacreacion:
+            type: datetime
+            nullable: true
+        nombre:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        numerocliente:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        observaciones:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        telefono:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        updatedat:
+            type: datetime
+            nullable: false
+            column: updatedAt
+    manyToOne:
+        ididentificacion:
+            targetEntity: Identificaciones
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ididentificacion:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idclasificacion:
+            targetEntity: Clasificaciones
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idclasificacion:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idcreadopor:
+            targetEntity: Usuarios
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idcreadopor:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,95 @@
+AppBundle\Entity\Datosgenerales:
+    type: entity
+    table: datosgenerales
+    indexes:
+        idcliente:
+            columns:
+                - idcliente
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        anclaje:
+            type: boolean
+            nullable: true
+        capital:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        caracteristicas:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        cotitular:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        createdat:
+            type: datetime
+            nullable: false
+            column: createdAt
+        descripcion:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        entregainmediata:
+            type: boolean
+            nullable: true
+        estado:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        fecha:
+            type: datetime
+            nullable: true
+        interes:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        observacion:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        tasa:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        updatedat:
+            type: datetime
+            nullable: false
+            column: updatedAt
+        validado:
+            type: boolean
+            nullable: true
+    manyToOne:
+        idcliente:
+            targetEntity: Clientes
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idcliente:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
