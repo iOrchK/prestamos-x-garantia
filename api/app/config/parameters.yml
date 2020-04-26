@@ -2,7 +2,8 @@
 parameters:
     database_host: localhost
     database_port: 3306
-    database_name: pxg_dev
+    # database_name: pxg_dev
+    database_name: nuevosol_dev
     database_user: admin
     database_password: admin
     mailer_transport: smtp
